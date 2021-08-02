@@ -1,0 +1,19 @@
+body {
+    background-color: rgb(255, 230, 208);
+}
+
+h1 {
+    color: maroon;
+}
+
+label{
+    color: rgb(235, 61, 90);
+}
+
+button{
+    height: 30px;
+    width: 65px;
+    border-color: rgb(172, 0, 51);
+    color:rgb(172, 0, 51);
+    background-color: rgb(255, 172, 186);
+    border-radius: 30%;}
