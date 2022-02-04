@@ -9,12 +9,13 @@ var firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 userName = localStorage.getItem("userName");
+roomName = localStorage.getItem("roomName");
 
-function addRoom() {
-    roomName = document.getElementById("roomInput").value;
-    localStorage.setItem("roomName", roomName);
-    firebase.database().ref("/").child(roomName).update({
-        key: "value"
+function send() {
+    message = document.getElementById("message").value;
+    firebase.database().ref(roomName).push({
+        name: userName,
+        message: message,
+        like: 0
     });
-    window.location = "page3.html";
 }
